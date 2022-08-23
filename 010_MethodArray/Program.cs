@@ -1,8 +1,8 @@
 ﻿
-int [] array = {15,2,53,64,554,66,97,78,29};
+int [] array = {15,2,53,64,554,66,64,78,29};
 
 int n = array.Length;
-int find = 78;
+int find = 64;
 int index = 0;
 
 while (index < n)
@@ -10,6 +10,7 @@ while (index < n)
     if(array[index] == find)
     {
         Console.WriteLine(index);
+        break; // при повторе одинаковых элементов быдаст только первый (прервет ветвление)
     }
     index++;
 }
