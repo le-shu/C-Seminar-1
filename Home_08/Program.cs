@@ -18,7 +18,7 @@ while(number2 >= number1)
      // Console.Write(i + " ");
 // }
 
-/ Вариант преподавателя №2:
+// Вариант преподавателя №2:
 // for (int i = 1; i <=number1; i++);
 // {
      // if (i % 2 == 0)
