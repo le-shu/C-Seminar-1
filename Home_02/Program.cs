@@ -4,7 +4,6 @@
 // a = -9 b = -3 -> max = -3
 
 Console.Write("Введите число 1: ");
-
 int number = Convert.ToInt32(Console.ReadLine());
 
 Console.Write("Введите число 2: ");
