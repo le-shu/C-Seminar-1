@@ -8,10 +8,15 @@ int A = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите число B: ");
 int B = int.Parse(Console.ReadLine());
 
-int result = 1;
-
-for (int i = 1; i <= B; i++)
+int Power(int A, int B)
 {
-    result = result * A;
+    int result = 1;
+
+    for (int i = 1; i <= B; i++)
+    {
+        result = result * A;
+    }
+    return result;
 }
-Console.WriteLine($"Число {A} в степени {B} = {result}");
+
+Console.WriteLine ($"Число {A} в степени {B} = {Power(A, B)}");
