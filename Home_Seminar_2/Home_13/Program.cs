@@ -6,6 +6,7 @@
 // 32679 -> 6
 
 Console.Write("Укажите число: ");
+
 int number = Convert.ToInt32(Console.ReadLine());
 
 void ThirdNumber (int number)
