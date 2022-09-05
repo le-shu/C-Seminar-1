@@ -12,13 +12,27 @@ void MultArrayElements()
     int length = Convert.ToInt32(Console.ReadLine());
 
     int [] Array = new int [length];
-    int [] ArrayNew = new int [length/2];;
-
-    for (int i = 0; i < (length/2); i++)
-    {
+    int [] ArrayNew;
+   
+    for (int i = 0; i < Array.Length; i++)
+        {
         Array[i] = new Random().Next(-100, 101);
-        ArrayNew[i] = (Array[i] * Array[length-1-i]);
-    }
+        }
+
+    Console.WriteLine(String.Join(" ", Array));
+
+    for (int j = 0; j < Array.Length/2; j++)
+    {
+        if ((j % 2) == 0)
+        {   
+            ArrayNew[j] = (Array[j] * Array[Array.Length-1-j]);
+        }
+
+        else
+        {
+            ArrayNew[j] = (Array[j] * Array[Array.Length-1-j]);
+        }
     Console.WriteLine(String.Join(" ", ArrayNew));
+    }
 }
 MultArrayElements();
