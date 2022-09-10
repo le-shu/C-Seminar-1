@@ -50,19 +50,19 @@ void Task41()
 void Task43()
 {
     Console.WriteLine("Введите число b1: ");
-    int b1 = Convert.ToInt32(Console.ReadLine());
+    double b1 = Convert.ToDouble(Console.ReadLine());
 
     Console.WriteLine("Введите число k1: ");
-    int k1 = Convert.ToInt32(Console.ReadLine());
+    double k1 = Convert.ToDouble(Console.ReadLine());
 
     Console.WriteLine("Введите число b2: ");
-    int b2 = Convert.ToInt32(Console.ReadLine());
+    double b2 = Convert.ToDouble(Console.ReadLine());
 
     Console.WriteLine("Введите число k2: ");
-    int k2 = Convert.ToInt32(Console.ReadLine());
+    double k2 = Convert.ToDouble(Console.ReadLine());
 
-    double x = (b2 - b1) / (k1 - k2);
-    double y = k1 * x + b1;
+    double x = Math.Round(((b2 - b1) / (k1 - k2)), 2);
+    double y = Math.Round((k1 * x + b1), 2);
 
     Console.WriteLine($"Прямые пересекаются в точке: ({x}, {y})");
 }
