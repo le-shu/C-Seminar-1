@@ -75,17 +75,21 @@ void Task50()
     int[,] array = GetArrayDouble(rows, columns, 0, 10);
     PrintArray(array);
 
-    Console.WriteLine("Введите позицию элемента: ");
-    int position = int.Parse(Console.ReadLine());
-    int count = 0;
+    Console.WriteLine("Решим задачу с указанием строки и столбца элемента.");
+
+    Console.WriteLine("Введите строку элемента: ");
+    int PowPosition = int.Parse(Console.ReadLine());
+
+    Console.WriteLine("Введите столбец элемента: ");
+    int ColumnsPosition = int.Parse(Console.ReadLine());
+
     int ArrPosition = 0;
 
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < columns; j++)
         {
-            count++;
-            if (count == position)
+            if (i == PowPosition && j == ColumnsPosition)
             {
                 ArrPosition = array[i, j];
                 break;
@@ -99,9 +103,38 @@ void Task50()
     }    
     else
     {
-        Console.WriteLine($"Значение элемента на позиции {position} - {ArrPosition}");
+        Console.WriteLine($"Значение элемента на позиции ({PowPosition}, {ColumnsPosition}) - {ArrPosition}");
+    }
+    Console.WriteLine("Решим задачу с указанием порядкого номера элемента.");
+
+    Console.WriteLine("Введите позицию элемента: ");
+    int position = int.Parse(Console.ReadLine());
+    int count = 0;
+    int ArrPosition1 = 0;
+
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            count++;
+            if (count == position)
+            {
+                ArrPosition1 = array[i, j];
+                break;
+            }
+        }
+    }
+
+    if (ArrPosition1 == 0)
+    {
+        Console.WriteLine("такого числа в массиве нет");
+    }    
+    else
+    {
+        Console.WriteLine($"Значение элемента на позиции {position} - {ArrPosition1}");
     }
 }
+
 
 int[,] GetArrayDouble(int rows, int columns, int minValue, int maxValue)
 {
@@ -168,5 +201,6 @@ void Task52()
         SumDif[i] = (Sum[i] / rows);
     }
 
-    Console.WriteLine(String.Join(" ", SumDif));
+    Console.Write("Среднее арифметическое каждого столбца: ");
+    Console.WriteLine(String.Join(", ", SumDif));
 }
